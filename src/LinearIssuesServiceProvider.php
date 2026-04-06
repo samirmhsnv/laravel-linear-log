@@ -16,6 +16,12 @@ class LinearIssuesServiceProvider extends ServiceProvider
 
     public function boot(): void
     {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/linear-issues.php' => config_path('linear-issues.php'),
+            ], 'linear-issues-config');
+        }
+
         $this->app->make('log')->extend('linear', function ($app, array $config): MonologLogger {
             $packageConfig = $app['config']->get('linear-issues', []);
             $mergedConfig = array_replace($packageConfig, $config);

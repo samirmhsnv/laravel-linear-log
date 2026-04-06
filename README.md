@@ -10,6 +10,12 @@ composer require samirmhsnv/laravel-linear-log
 
 Laravel package auto-discovery registers the service provider automatically.
 
+Publish package config (optional, if you want a dedicated config file):
+
+```bash
+php artisan vendor:publish --tag=linear-issues-config
+```
+
 ## Configuration
 
 The package registers a custom log driver named `linear`.
@@ -150,7 +156,7 @@ If you see `Invalid scope: read required`, create a new Linear API key with read
 ## Requirements
 
 - PHP `^8.0`
-- Laravel log/support components `^8.0` to `^12.0`
+- Laravel log/support components `^8.0` to `^13.0`
 - `monolog/monolog` `^2.8` or `^3.0`
 - `guzzlehttp/guzzle` `^7.9`
 
