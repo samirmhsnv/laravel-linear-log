@@ -1,0 +1,28 @@
+{
+    "name": "samirmhsnv/laravel-linear-log",
+    "description": "Laravel custom logging driver that creates Linear issues from error logs.",
+    "type": "library",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "php": "^8.0",
+        "illuminate/log": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0",
+        "monolog/monolog": "^2.8|^3.0",
+        "guzzlehttp/guzzle": "^7.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "SamirMhsnv\\LaravelLinearIssues\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SamirMhsnv\\LaravelLinearIssues\\LinearIssuesServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
